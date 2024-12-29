@@ -1,6 +1,6 @@
-package com.example.GameManage.repository;
+package com.example.gamemanager.repository;
 
-import com.example.GameManage.entity.GameEntity;
+import com.example.gamemanager.entity.GameEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,8 +1,8 @@
-package com.example.GameManage.service;
+package com.example.gamemanager.service;
 
 
-import com.example.GameManage.entity.GameEntity;
-import com.example.GameManage.repository.GameRepository;
+import com.example.gamemanager.entity.GameEntity;
+import com.example.gamemanager.repository.GameRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

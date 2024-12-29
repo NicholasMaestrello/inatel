@@ -1,4 +1,4 @@
-package com.example.GameManage.entity;
+package com.example.gamemanager.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;

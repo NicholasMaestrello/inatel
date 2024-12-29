@@ -1,4 +1,4 @@
-package com.example.GameManage.dto;
+package com.example.gamemanager.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;

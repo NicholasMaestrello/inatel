@@ -1,6 +1,6 @@
-package com.example.GameManage;
+package com.example.gamemanager;
 
-import com.example.GameManage.dto.NotificationDto;
+import com.example.gamemanager.dto.NotificationDto;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;

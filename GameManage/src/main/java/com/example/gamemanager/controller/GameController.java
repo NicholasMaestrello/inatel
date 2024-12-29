@@ -1,11 +1,10 @@
-package com.example.GameManage.controller;
+package com.example.gamemanager.controller;
 
 
-import com.example.GameManage.cache.PublisherCache;
-import com.example.GameManage.dto.GameDto;
-import com.example.GameManage.entity.GameEntity;
-import com.example.GameManage.mapper.GameMapper;
-import com.example.GameManage.service.GameService;
+import com.example.gamemanager.cache.PublisherCache;
+import com.example.gamemanager.dto.GameDto;
+import com.example.gamemanager.mapper.GameMapper;
+import com.example.gamemanager.service.GameService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,11 +12,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
 import java.util.List;
-import java.util.Map;
-import java.util.UUID;
 import java.util.stream.Collectors;
 
 @RestController

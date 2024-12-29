@@ -1,4 +1,4 @@
-package com.example.GameManage.cache;
+package com.example.gamemanager.cache;
 
 import com.github.benmanes.caffeine.cache.Cache;
 import com.github.benmanes.caffeine.cache.Caffeine;

@@ -1,15 +1,12 @@
-package com.example.GameManage.service;
+package com.example.gamemanager.service;
 
-import com.example.GameManage.cache.PublisherCache;
-import com.example.GameManage.dto.PublisherDto;
+import com.example.gamemanager.cache.PublisherCache;
+import com.example.gamemanager.dto.PublisherDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.client.HttpClientErrorException;
-
-import java.util.Arrays;
-import java.util.List;
 
 @Service
 public class PublisherService {
@@ -31,7 +28,6 @@ public class PublisherService {
         }
         boolean exists = fetchAndCachePublisher(publisherId);
         return exists;
-
     }
 
     private boolean fetchAndCachePublisher(String publisherId) {
@@ -43,7 +39,6 @@ public class PublisherService {
             publisherCache.put(publisherId, false);
             return false;
         } catch (Exception e){
-            //Handle other exceptions
             return false;
         }
     }

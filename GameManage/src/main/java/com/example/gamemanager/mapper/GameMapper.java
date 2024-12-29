@@ -1,7 +1,7 @@
-package com.example.GameManage.mapper;
+package com.example.gamemanager.mapper;
 
-import com.example.GameManage.dto.GameDto;
-import com.example.GameManage.entity.GameEntity;
+import com.example.gamemanager.dto.GameDto;
+import com.example.gamemanager.entity.GameEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Named;

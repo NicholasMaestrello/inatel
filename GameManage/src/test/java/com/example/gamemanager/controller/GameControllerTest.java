@@ -1,9 +1,9 @@
-package com.example.GameManage.controller;
+package com.example.gamemanager.controller;
 
-import com.example.GameManage.cache.PublisherCache;
-import com.example.GameManage.dto.GameDto;
-import com.example.GameManage.mapper.GameMapper;
-import com.example.GameManage.service.GameService;
+import com.example.gamemanager.cache.PublisherCache;
+import com.example.gamemanager.dto.GameDto;
+import com.example.gamemanager.mapper.GameMapper;
+import com.example.gamemanager.service.GameService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -90,6 +90,8 @@ class GameControllerTest {
         timePlayed.put(LocalDate.now(),10);
         gameDto.setTimePlayed(timePlayed);
 
+        when(gameService.createGame(any()))
+                .thenThrow(new IllegalArgumentException());
 
         mockMvc.perform(post("/api/game")
                         .contentType(MediaType.APPLICATION_JSON)
