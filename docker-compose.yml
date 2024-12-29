@@ -1,0 +1,56 @@
+version: "3.9"
+services:
+  mysql:
+    image: mysql:8
+    ports:
+      - "3306:3306"
+      - "33060:33060"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: bootdb
+    networks:
+      - inatel
+
+  publisher-manager:
+    image: adautomendes/publisher-manager
+    ports:
+      - "8080:8080"
+    environment:
+      SERVER_HOST: localhost
+      SERVER_PORT: 8082
+      MYSQL_HOST: mysql
+      MYSQL_PORT: 3306
+      SPRING_PROFILES_ACTIVE: prod
+    depends_on:
+      - mysql
+    networks:
+      - inatel
+
+#  game-manager:
+#    build: ./GameManager # Path to game-manager's Dockerfile
+#    ports:
+#      - "8081:8081"
+#    environment:
+#      SERVER_HOST: localhost
+#      SERVER_PORT: 8081
+#      MYSQL_HOST: mysql
+#      MYSQL_PORT: 3306
+#      SPRING_PROFILES_ACTIVE: prod
+#    depends_on:
+#      - mysql
+#    networks:
+#      - inatel
+#
+#  publisher-manager:
+#    build: ./publisher-manager # Path to publisher-manager's Dockerfile
+#    ports:
+#      - "8080:8080"
+#    environment:
+#    # ... publisher-manager environment variables ...
+#    depends_on:
+#      - mysql
+#    networks:
+#      - inatel
+
+networks:
+  inatel:
